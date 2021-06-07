@@ -1,0 +1,19 @@
+.home_root {
+    display: flex;
+  height: 100vh;
+}
+
+.left_part {
+  width: 25%;
+  background-color: grey;
+}
+
+.right_part {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 75%;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  overflow-y: auto;
+}
