@@ -12,6 +12,7 @@
     "sass:watch": "sass --watch ./styles/global.scss ./styles/compiled.css"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "cypress": "^7.4.0",
     "next": "10.2.3",
     "react": "17.0.2",

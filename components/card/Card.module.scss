@@ -1,9 +1,30 @@
 .cardRoot {
+  display: flex;
+  flex-direction: column;
   width: 30rem;
-  height: 35rem;
+  height: 30rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image_wrapper {
+  height: 65%;
+  overflow: hidden;
+}
+.image {
+  object-fit: cover;
+}
+.text_wrapper {
+  text-align: center;
+  padding: 1rem;
+}
+.name {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.aliases {
+  font-size: 1.4rem;
 }
