@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.imageContainer {
+  width: 100%;
+}
+.detailsContainer {
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 700;
+}
+.occupation {
+  font-size: 18px;
+}
