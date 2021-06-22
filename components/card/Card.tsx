@@ -12,7 +12,7 @@ export default function Card({ superheroData: { id, image, name, biography } }: 
 
 const Usage = ({ id, image, name, biography }: any) => {
   return (
-    <div className={styles.cardRoot}>
+    <div data-test-id="card-root" className={styles.cardRoot}>
       <div className={styles.image_wrapper}>
         <Link href={`/${id}`}>
           <a>

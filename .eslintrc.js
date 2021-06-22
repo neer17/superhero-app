@@ -17,6 +17,7 @@ module.exports = {
     browser: true, // Enables browser globals like window and document
     amd: true, // Enables require() and define() as global variables as per the amd spec.
     node: true, // Enables Node.js global variables and Node.js scoping.
+    "cypress/globals": true
   },
   extends: [
     'eslint:recommended',
@@ -25,8 +26,9 @@ module.exports = {
     'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    "plugin:cypress/recommended"
   ],
-  plugins: ['simple-import-sort'],
+  plugins: ['simple-import-sort', 'cypress'],
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }], // Use our .prettierrc file as source
     'react/react-in-jsx-scope': 'off',
@@ -40,5 +42,10 @@ module.exports = {
     ],
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/no-force": "warn",
+    "cypress/no-async-tests": "error"
   },
 }
