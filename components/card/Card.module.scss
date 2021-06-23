@@ -12,7 +12,7 @@
 }
 
 .image_wrapper {
-  height: 65%;
+  height: 80%;
   overflow: hidden;
 }
 .image {
@@ -23,9 +23,13 @@
   padding: 1rem;
 }
 .name {
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 2.2rem;
+  font-weight: 500;
 }
 .aliases {
   font-size: 1.4rem;
+}
+
+.logo {
+  margin-left: auto;
 }

@@ -16,7 +16,9 @@ describe('Home Page test cases', () => {
 
   it('On each card click navigate to a different route with id appended in the end', () => {
     const random = Math.round(Math.random() * 100)
-    cy.get('[data-test-id="card-root"]').eq(random - 1).click()
+    cy.get('[data-test-id="card-root"]')
+      .eq(random - 1)
+      .click()
     cy.url().should('eq', `${URL}/${random}`)
   })
 })

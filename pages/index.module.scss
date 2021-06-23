@@ -2,10 +2,50 @@
   display: flex;
   height: 100vh;
 }
-
 .left_part {
+  display: flex;
+  flex-direction: column;
   width: 25%;
-  background-color: grey;
+  height: 100%;
+  background-color: #f1efef;
+}
+.detailsContainer {
+  display: flex;
+  align-items: center;
+}
+.imageContainer {
+  border-radius: 50%;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: -2rem;
+}
+.nameContainer {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.emailContainer {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0;
+}
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 70%;
+  height: 4rem;
+  font-size: 2rem;
+  border-radius: 0.3rem;
+  background-color: rgb(201, 200, 200);
+  cursor: pointer;
 }
 
 .right_part {
