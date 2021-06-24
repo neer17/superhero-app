@@ -20,6 +20,11 @@ export default function Home({ data }: any) {
     else router.replace('/login')
   }, [])
 
+  const logout = () => {
+    localStorage.clear()
+    router.replace('/login')
+  }
+
   return (
     <>
       {email.length == 0 ? (
@@ -28,14 +33,18 @@ export default function Home({ data }: any) {
         <div id={'index_page_root'} className={styles.home_root}>
           <section className={styles.left_part}>
             <div className={styles.detailsContainer}>
-              <div className={styles.imageContainer}></div>
+              <div className={styles.imageContainer}>
+                <Image src={'/user_profile.png'} width={80} height={80} />
+              </div>
               <div className={styles.details}>
                 <h2 className={styles.nameContainer}>Neeraj Sewani</h2>
                 <h2 className={styles.emailContainer}>test@example.com</h2>
               </div>
             </div>
 
-            <h5 className={styles.logoutBtn}>Logout</h5>
+            <h5 className={styles.logoutBtn} onClick={logout}>
+              Logout
+            </h5>
           </section>
           <section className={styles.right_part}>
             {data?.map((item: any) => (

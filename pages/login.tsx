@@ -23,7 +23,6 @@ export default function Login({}: Props): ReactElement {
           }}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
-              alert(JSON.stringify(values, null, 2))
               setSubmitting(false)
               localStorage.setItem('email', values.email)
               router.push('/')
