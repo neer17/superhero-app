@@ -38,7 +38,7 @@ export default function Home({ data }: any) {
               </div>
               <div className={styles.details}>
                 <h2 className={styles.nameContainer}>Neeraj Sewani</h2>
-                <h2 className={styles.emailContainer}>test@example.com</h2>
+                <h2 className={styles.emailContainer}>{localStorage.getItem('email')}</h2>
               </div>
             </div>
 

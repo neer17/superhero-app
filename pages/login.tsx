@@ -38,10 +38,11 @@ export default function Login({}: Props): ReactElement {
             isSubmitting,
             /* and other goodies */
           }) => (
-            <form onSubmit={handleSubmit}>
+            <form data-test-id="loginForm" onSubmit={handleSubmit}>
               <div className={styles.inputWrapper}>
                 <label htmlFor="email-input">Email</label>
                 <input
+                  data-test-id="emailInput"
                   id="email-input"
                   type="email"
                   name="email"
@@ -54,6 +55,7 @@ export default function Login({}: Props): ReactElement {
               <div className={styles.inputWrapper}>
                 <label htmlFor="pass-input">Password</label>
                 <input
+                  data-test-id="passwordInput"
                   id="pass-input"
                   type="password"
                   name="password"
@@ -63,7 +65,7 @@ export default function Login({}: Props): ReactElement {
                 />
                 {errors.password && touched.password && errors.password}
               </div>
-              <button type="submit" disabled={isSubmitting}>
+              <button data-test-id="submitBtn" type="submit" disabled={isSubmitting}>
                 Submit
               </button>
             </form>
