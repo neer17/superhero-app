@@ -10,9 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <style>
-            
-          </style>
+          <style></style>
         </Head>
         <body>
           <Main />

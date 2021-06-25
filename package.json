@@ -8,7 +8,7 @@
     "start": "next start",
     "watch": "concurrently \"npm run dev\" \"npm run sass:watch\"",
     "lint": "eslint --fix .",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "format": "prettier --write \"./**/*.{js,jsx,json}\"",
     "sass:watch": "sass --watch ./styles/global.scss ./styles/compiled.css",
     "cypress:open": "cypress open",
     "prepare": "husky install"
@@ -46,6 +46,6 @@
     }
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "yarn run format"
   }
 }
