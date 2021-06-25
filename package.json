@@ -11,8 +11,7 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "sass:watch": "sass --watch ./styles/global.scss ./styles/compiled.css",
     "cypress:open": "cypress open",
-    "prepare": "husky install",
-    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
+    "prepare": "husky install"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -47,8 +46,6 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx, ts, tsx}": [
-      "npm run prettier:check"
-    ]
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
