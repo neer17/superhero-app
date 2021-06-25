@@ -37,8 +37,12 @@ export default function Home({ data }: any) {
                 <Image src={'/user_profile.png'} width={80} height={80} />
               </div>
               <div className={styles.details}>
-                <h2 className={styles.nameContainer}>Neeraj Sewani</h2>
-                <h2 className={styles.emailContainer}>{localStorage.getItem('email')}</h2>
+                <h2 data-test-id="nameContainer" className={styles.nameContainer}>
+                  Neeraj Sewani
+                </h2>
+                <h2 data-test-id="emailContainer" className={styles.emailContainer}>
+                  {localStorage.getItem('email')}
+                </h2>
               </div>
             </div>
 

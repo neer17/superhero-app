@@ -1,7 +1,7 @@
 describe('Login Page Tests', () => {
-  beforeEach(() => {
-    localStorage.clear()
-  })
+  // beforeEach(() => {
+  //   localStorage.clear()
+  // })
 
   it("Visit home and get redirected to '/login' as no user is logged-in initially", () => {
     cy.visit('/')
@@ -13,7 +13,7 @@ describe('Login Page Tests', () => {
     formContainer.should('have.length', 1)
     formContainer.within(() => {
       cy.get('input:first').should('have.attr', 'name', 'email')
-      cy.get('input:last').should('have.attr', 'name', 'password')
+              cy.get('input:last').should('have.attr', 'name', 'password')
     })
   })
 
