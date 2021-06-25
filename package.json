@@ -10,13 +10,14 @@
     "lint": "eslint --fix .",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "sass:watch": "sass --watch ./styles/global.scss ./styles/compiled.css",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "prepare": "husky install",
+    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "cypress": "^7.5.0",
-    "eslint-plugin-cypress": "^2.11.3",
     "formik": "^2.2.9",
+    "husky": "^6.0.0",
     "next": "10.2.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -26,14 +27,15 @@
     "@types/react": "17.0.8",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
+    "cypress": "^7.5.0",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "husky": "^6.0.0",
     "jest": "^27.0.4",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
@@ -46,13 +48,7 @@
   },
   "lint-staged": {
     "*.{js,jsx, ts, tsx}": [
-      "./node_modules/.bin/prettier --write",
-      "./node_modules/.bin/eslint --fix",
-      "git add"
-    ],
-    "*.{html,css,less,ejs}": [
-      "./node_modules/.bin/prettier --write",
-      "git add"
+      "npm run prettier:check"
     ]
   }
 }

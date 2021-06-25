@@ -19,7 +19,7 @@ describe('Home Page test cases', () => {
 
     cy.get('[data-test-id="nameContainer"]').should('contain', 'Neeraj Sewani')
     cy.get('[data-test-id="emailContainer"]').should('contain', 'neeraj@gmail.com', () => {
-                                       expect(localStorage.getItem('email')).equal('neeraj@gmail.com')
+                                             expect(localStorage.getItem('email')).equal('neeraj@gmail.com')
     })
   })
 
