@@ -13,7 +13,7 @@ describe('Login Page Tests', () => {
     formContainer.should('have.length', 1)
     formContainer.within(() => {
       cy.get('input:first').should('have.attr', 'name', 'email')
-      cy.get('input:last').should('have.attr', 'name', 'password')
+                      cy.get('input:last').should('have.attr', 'name', 'password')
     })
   })
 
