@@ -33,6 +33,6 @@ describe('Home Page test cases', () => {
     cy.get('[data-test-id="card-root"]')
       .eq(random - 1)
       .click()
-    cy.url().should('eq', `${URL}/${random}`)
+                                                     cy.url().should('eq', `${URL}/${random}`)
   })
 })
