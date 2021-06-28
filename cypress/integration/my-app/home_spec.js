@@ -19,7 +19,7 @@ describe('Home Page test cases', () => {
 
     cy.get('[data-test-id="nameContainer"]').should('contain', 'Neeraj Sewani')
     cy.get('[data-test-id="emailContainer"]').should('contain', 'neeraj@gmail.com', () => {
-                                      expect(localStorage.getItem('email')).equal('neeraj@gmail.com')
+      expect(localStorage.getItem('email')).equal('neeraj@gmail.com')
     })
   })
 
@@ -33,6 +33,6 @@ describe('Home Page test cases', () => {
     cy.get('[data-test-id="card-root"]')
       .eq(random - 1)
       .click()
-    cy.url().should('eq', `${URL}/${random}`)
+                                                     cy.url().should('eq', `${URL}/${random}`)
   })
 })
