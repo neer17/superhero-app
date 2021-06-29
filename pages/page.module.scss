@@ -1,21 +1,57 @@
 .root {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  height: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
-
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  height: 90vh;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
 .imageContainer {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background: #ffafbd; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffc3a0, #ffafbd); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffc3a0,
+    #ffafbd
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .detailsContainer {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 50%;
 }
 
+.detailsWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  margin-left: 5rem;
+}
 .name {
-  font-size: 22px;
-  font-weight: 100;
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 .occupation {
-  font-size: 18px;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 2rem;
 }

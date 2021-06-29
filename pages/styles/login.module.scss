@@ -4,6 +4,9 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-image: url('./../../public/login_cover.jpg');
+  background-size: cover;
+  background-repeat: repeat;
 }
 .card {
   display: flex;
@@ -11,7 +14,16 @@
   width: 50%;
   height: 50%;
   padding: 2.4rem;
-  box-shadow: 0 0.2rem 8rem #e9e5e5;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 1rem;
+  color: #fff;
+  background: #43c6ac; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #191654, #43c6ac); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #191654,
+    #43c6ac
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   form {
     display: flex;
@@ -26,6 +38,7 @@
     background-color: rgb(179, 250, 226);
     border-radius: 0.5rem;
     color: #000;
+    cursor: pointer;
   }
 }
 .inputWrapper {

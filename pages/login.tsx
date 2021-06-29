@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react'
 import { Formik } from 'formik'
 import router, { useRouter } from 'next/router'
+import Image from 'next/image'
 
 interface Props {}
 

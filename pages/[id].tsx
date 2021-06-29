@@ -8,21 +8,30 @@ import styles from './page.module.scss'
 
 interface Props {}
 
-export default function Page({
-  data: {
-    image,
-    name,
-    work: { occupation },
-  },
-}: Props): ReactElement {
+export default function Page({ data: { image, name, biography } }: Props): ReactElement {
   return (
     <div className={styles.root}>
-      <div className={styles.imageContainer}>
-        <Image className={styles.image} src={`${image.url}`} width={300} height={300} />
-      </div>
-      <div className={styles.detailsContainer}>
-        <div className={styles.name}>{name}</div>
-        <div className={styles.occupation}>{occupation}</div>
+      <div data-test-id="statsCard" className={styles.wrapper}>
+        <div className={styles.detailsContainer}>
+          <div className={styles.detailsWrapper}>
+            <div className={styles.name}>{name}</div>
+            <h5 className={styles.occupation}>
+              First Appearance:{' '}
+              <h5 data-test-id="firstAppearance" className={styles.value}>
+                {biography['first-appearance']}
+              </h5>
+            </h5>
+            <h5 className={styles.occupation}>
+              Publisher:{' '}
+              <h5 data-test-id="publisher" className={styles.value}>
+                {biography.publisher}
+              </h5>
+            </h5>
+          </div>
+        </div>
+        <div className={styles.imageContainer}>
+          <Image className={styles.image} src={`${image.url}`} width={500} height={500} />
+        </div>
       </div>
     </div>
   )
