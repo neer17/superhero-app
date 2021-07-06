@@ -10,7 +10,7 @@ import styles from './styles/login.module.scss'
 export default function Login({}: Props): ReactElement {
   return (
     <div className={styles.root}>
-      <div className={styles.card}>
+      <div data-testid="loginCard" className={styles.card}>
         <Formik
           initialValues={{ email: '', password: '' }}
           validate={(values) => {
@@ -39,11 +39,11 @@ export default function Login({}: Props): ReactElement {
             isSubmitting,
             /* and other goodies */
           }) => (
-            <form data-test-id="loginForm" onSubmit={handleSubmit}>
+            <form data-testid="loginForm" onSubmit={handleSubmit}>
               <div className={styles.inputWrapper}>
                 <label htmlFor="email-input">Email</label>
                 <input
-                  data-test-id="emailInput"
+                  data-testid="emailInput"
                   id="email-input"
                   type="email"
                   name="email"
@@ -56,7 +56,7 @@ export default function Login({}: Props): ReactElement {
               <div className={styles.inputWrapper}>
                 <label htmlFor="pass-input">Password</label>
                 <input
-                  data-test-id="passwordInput"
+                  data-testid="passwordInput"
                   id="pass-input"
                   type="password"
                   name="password"
@@ -66,7 +66,7 @@ export default function Login({}: Props): ReactElement {
                 />
                 {errors.password && touched.password && errors.password}
               </div>
-              <button data-test-id="submitBtn" type="submit" disabled={isSubmitting}>
+              <button data-testid="submitBtn" type="submit" disabled={isSubmitting}>
                 Submit
               </button>
             </form>

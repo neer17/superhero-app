@@ -9,7 +9,7 @@ describe('Login Page Tests', () => {
   })
 
   it("Check the form exists on the '/login' page", () => {
-    const formContainer = cy.get('[data-test-id="loginForm"]')
+    const formContainer = cy.get('[data-testid="loginForm"]')
     formContainer.should('have.length', 1)
     formContainer.within(() => {
       cy.get('input:first').should('have.attr', 'name', 'email')
@@ -18,9 +18,9 @@ describe('Login Page Tests', () => {
   })
 
   it('Fill form and submit', () => {
-    cy.get('[data-test-id="emailInput"]').type('neeraj@gmail.com')
-    cy.get('[data-test-id="passwordInput"]').type('neeraj')
-    cy.get('[data-test-id="loginForm"]').submit()
+    cy.get('[data-testid="emailInput"]').type('neeraj@gmail.com')
+    cy.get('[data-testid="passwordInput"]').type('neeraj')
+    cy.get('[data-testid="loginForm"]').submit()
     cy.url().should('eq', Cypress.config().baseUrl + '/')
   })
 })

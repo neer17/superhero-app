@@ -11,19 +11,19 @@ interface Props {}
 export default function Page({ data: { image, name, biography } }: Props): ReactElement {
   return (
     <div className={styles.root}>
-      <div data-test-id="statsCard" className={styles.wrapper}>
+      <div data-testid="statsCard" className={styles.wrapper}>
         <div className={styles.detailsContainer}>
           <div className={styles.detailsWrapper}>
             <div className={styles.name}>{name}</div>
             <h5 className={styles.occupation}>
               First Appearance:{' '}
-              <h5 data-test-id="firstAppearance" className={styles.value}>
+              <h5 data-testid="firstAppearance" className={styles.value}>
                 {biography['first-appearance']}
               </h5>
             </h5>
             <h5 className={styles.occupation}>
               Publisher:{' '}
-              <h5 data-test-id="publisher" className={styles.value}>
+              <h5 data-testid="publisher" className={styles.value}>
                 {biography.publisher}
               </h5>
             </h5>

@@ -64,7 +64,7 @@ const Usage = ({ id, image, name, publisher }: any) => {
   return (
     <Link href={`/${id}`}>
       <a>
-        <div data-test-id="card-root" className={styles.cardRoot}>
+        <div data-testid="card-root" className={styles.cardRoot}>
           <div className={styles.image_wrapper}>
             <Image className={styles.image} src={`${image.url}`} width={300} height={300} />
           </div>

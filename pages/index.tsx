@@ -30,17 +30,17 @@ export default function Home({ data }: any) {
       {email.length == 0 ? (
         <div>LOADER</div>
       ) : (
-        <div id={'index_page_root'} className={styles.home_root}>
+        <div data-testid="homePageRoot" id='index_page_root' className={styles.home_root}>
           <section className={styles.left_part}>
             <div className={styles.detailsContainer}>
               <div className={styles.imageContainer}>
                 <Image src={'/user_profile.png'} width={80} height={80} />
               </div>
               <div className={styles.details}>
-                <h2 data-test-id="nameContainer" className={styles.nameContainer}>
+                <h2 data-testid="nameContainer" className={styles.nameContainer}>
                   Neeraj Sewani
                 </h2>
-                <h2 data-test-id="emailContainer" className={styles.emailContainer}>
+                <h2 data-testid="emailContainer" className={styles.emailContainer}>
                   {localStorage.getItem('email')}
                 </h2>
               </div>

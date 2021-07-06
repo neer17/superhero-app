@@ -6,12 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest --watch",
     "watch": "concurrently \"npm run dev\" \"npm run sass:watch\"",
     "lint": "eslint --fix .",
     "format": "prettier --write \"./**/*.{js,jsx,json}\"",
     "sass:watch": "sass --watch ./styles/global.scss ./styles/compiled.css",
-    "cypress:open": "cypress open",
-    "prepare": "husky install"
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -22,6 +22,9 @@
     "sass": "^1.34.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.1.9",
     "@types/react": "17.0.8",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
